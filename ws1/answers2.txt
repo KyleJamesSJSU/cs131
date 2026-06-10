@@ -1,5 +1,13 @@
 B1: grep '"city":"Santa Barbara"' /data/yelp/yelp_academic_dataset_business.json
 B2: grep -c '"state":"CA"' /data/yelp/yelp_academic_dataset_business.json
-B3 (incorrect, needs fixing): grep -i '"text":".*worth.*"' /data/yelp/yelp_academic_dataset_review.json
-B4 (not done): grep -E (name|categories):(Coffee|Caf(=e=)) /data/yelp/yelp_academic_dataset_business.json
-B4: grep -E '"(name|categories)":"[^"]*(Coffee|Caf[[=e=]])[^"]*"' /data/yelp/yelp_academic_dataset_business.json
+B3: grep -i '"text":"[^"|\\"]*worth[^"|\\"]*"' /data/yelp/yelp_academic_dataset_review.json
+B4: grep -E '"(name|categories)":"[^"|\\"]*(Coffee|Caf[[=e=]])[^"|\\"]*"' /data/yelp/yelp_academic_dataset_business.json
+B5: grep -E '"stars":(4\.5|5\.0)' /data/yelp/yelp_academic_dataset_business.json
+B6 (unsure if this is what question wants): grep -E '"stars":5\.0,' /data/yelp/yelp_academic_dataset_business.json
+B7: grep -E '"text":"[^"|\\"]*[[:alnum:]]{1,}@[[:alnum:]\.]{1,}\.[[:alpha:]]{2,}[^"|\\"]"' /data/yelp/yelp_academic_dataset_review.json
+B8: grep -E '[[:digit:]]{3}-[[:digit:]]{3}-[[:digit:]]{4}' /data/yelp/yelp_academic_dataset_review.json
+B9: grep -E '"name":"P' /data/yelp/yelp_academic_dataset_business.json
+B10: grep -ci 'pizza' /data/yelp/yelp_academic_dataset_review.json
+B11: grep -n 'service' /data/yelp/yelp_academic_dataset_review.json
+B12: grep -vi '"categories":"[^"|\\"]*Restaurants[^"|\\"]*"' /data/yelp/yelp_academic_dataset_business.json
+
