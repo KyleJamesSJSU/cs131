@@ -1,0 +1,16 @@
+T1: cd /home/ishigaki-cs9/cs131/ws1
+T2: ls ../data/
+T3: file logs/app01.log .env
+T4: ls -ahlr
+T5: ls -Sl logs/
+T6: file size = 1048576, owner = ishigaki-cs9, last-modification time = Jun 3 09:45
+T7: ls data/Data?.csv
+T8: while inside ws1: ls . [[:upper:]]*
+T9: ls logs/BACKUP.[0-9][0-9][0-9]
+T10: cp -r data/ backup/
+T11: mv data/readme.txt data/README.md
+T12: rm -ir backup/data
+T13: git init (already done in parent directory cs131)
+
+
+T14: 
