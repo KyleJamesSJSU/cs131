@@ -1,0 +1,5 @@
+B1: grep '"city":"Santa Barbara"' /data/yelp/yelp_academic_dataset_business.json
+B2: grep -c '"state":"CA"' /data/yelp/yelp_academic_dataset_business.json
+B3 (incorrect, needs fixing): grep -i '"text":".*worth.*"' /data/yelp/yelp_academic_dataset_review.json
+B4 (not done): grep -E (name|categories):(Coffee|Caf(=e=)) /data/yelp/yelp_academic_dataset_business.json
+B4: grep -E '"(name|categories)":"[^"]*(Coffee|Caf[[=e=]])[^"]*"' /data/yelp/yelp_academic_dataset_business.json
