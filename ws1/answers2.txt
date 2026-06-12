@@ -10,4 +10,5 @@ B9: grep -E '"name":"P' /data/yelp/yelp_academic_dataset_business.json
 B10: grep -ci 'pizza' /data/yelp/yelp_academic_dataset_review.json
 B11: grep -n 'service' /data/yelp/yelp_academic_dataset_review.json
 B12: grep -vi '"categories":"[^"|\\"]*Restaurants[^"|\\"]*"' /data/yelp/yelp_academic_dataset_business.json
-
+B13: Stage 1 finds all businesses in California. Stage 2 uses the -o option to exclude all non-matching text, to isolate the review count from the reviews. Stage 3 further isolates the number itself from the review count json formatting. Stage 4 sorts the numbers numerically and in reverse, resulting in a list of numbers with the highest as the first lines. Stage 6 takes the first 3 lines of the result, discarding the rest, and outputs it to the standard output. 
+B14: grep '"city":"Santa Barbara"' /data/yelp/yelp_academic_dataset_business.json | grep -oE '"name":"[^"]*"' | grep -oE '"[^"\\"]+"$' | grep -oE '[^"\\"]*' | sort 
