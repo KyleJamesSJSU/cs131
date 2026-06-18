@@ -1,0 +1,31 @@
+Q1: git add notes.md
+git commit -m "ws2: add task line"
+Q2: git log --oneline -3
+Q3: git log --oneline -3 
+got commit hash d69be47
+Q4: git revert d69be47
+Q5: git rm --cached bigdata.bin
+echo "bigdata.bin" >> ../.gitignore
+git add ../.gitignore
+git commit --amend
+git push
+Q6: git checkout -b feature-summary
+Q7: touch summary.md
+echo "this is a summary line 1" >> summary.md
+echo "this is also a summary line 2" >> summary.md
+git add summary.md
+git commit -m "feature-summary: add summary.md"
+Q8: git diff main
+Q9: git checkout main
+git merge feature-summary 
+Q10: git branch -d feature-summary
+
+Q11: it doesn't report a merge conflict? running "git merge conflict-branch" immediately merges the two files, overriding the changes in main and preferring the ones in conflict-branch
+Q12: couldn't do this, but the command should be "git diff conflict-branch"
+Q13: couldn't do this part because it didn't make a merge conflict
+Q14: git add summary.md
+git commit
+ 
+Q15: git fetch origin
+git log origin/main..HEAD --oneline (was a bit confused about this, the provided command wasn't showing anything, but this one does show new commits relative to origin/main) 
+Q16: fetch lets you view incoming changes, while pull immediately merges incoming changes into your working branch. 
