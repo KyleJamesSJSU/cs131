@@ -1,0 +1,4 @@
+Number of students
+CS131 - 35
+CS163 - 20
+CS171 - 30

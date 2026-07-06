@@ -1,0 +1,28 @@
+#!/bin/bash
+# Program to output a system information page
+title="System Information Report for $HOSTNAME"
+timestamp="$(date)"
+diskspace="$(df -h)"
+homespace="$(du -b ~/cs131 | sort -nr | head -10)"
+
+report_disk_space () {
+	echo "disk_space function is called."
+	return
+}
+
+cat << EOF
+<html>
+	<head>
+		<title>$title</title>
+	</head>
+	<body>
+		<h1>$title</h1>
+		<p>$timestamp</p>
+		<h2>Storage Space</h2>
+		<p>$(report_disk_space)</p>
+		<p>$diskspace</p>
+		<h2>Storage Usage (~/cs131)</h2>
+		<p>$homespace</p>
+	</body>
+</html>
+EOF
