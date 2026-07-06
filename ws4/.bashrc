@@ -2,7 +2,9 @@
 #
 #
 
+
 # Git commit and push in a single command
+alias 'git commit -m'=gitcp
 gitcp () 
 {
 	# check if a message was provided, if not print an error message
