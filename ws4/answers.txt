@@ -1,0 +1,53 @@
+T1: 
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L244
+
+extract ()
+
+A command that chooses the correct extraction method to use, depending on the file's
+extension. It involves a for loop, one if-else, and one case statement.
+
+The for loop iterates over all objects in $* (all provided arguments), performing 
+the if check. If the provided file exists and is a regular file, it moves into the 
+case statement. If the file doesn't pass the check, the command "echo" is run with 
+an error message, stating that the file is not valid.
+
+The case statement contains 11 different cases to account for file extensions, 
+ranging from .tar.bz2 to .zip. Each unique case calls a different function with 
+different flags. The commands used are "tar", "bunzip2", "rar", "gunzip", "unzip", 
+"uncompress", and "7z". If the filename passes one of the provided checks, it will 
+execute the related command. If the filename doesn't match any of the checks, 
+the default case at the end "echo"s an error message, saying that it doesn't know 
+how to extract the provided file.
+
+
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L516
+
+phpconfig ()
+
+This command searches for the existence of a php config file. If it finds it, it 
+runs "sedit" on the file. ("sedit" is another function; it calls a text editor 
+depending on what editor is open on the terminal, including jpico, nano, pico, 
+and lastly vim)
+
+The command is an if-else statement with 5 different checks. Each check checks if 
+the php.ini file exists in a specific location, using the -f flag in a "test" call. 
+The checked locations are, in order: 
+- /etc/php.ini
+- /etc/php/php.ini
+- /etc/php5/php.ini
+- /usr/bin/php5/bin/php.ini
+- /etc/php5/apache2/php.ini
+If any of these are found, it calls "sedit" on the appropriate location. Due to 
+how if statements work, it will prefer a php.ini file in one of the first checked 
+locations over later ones.
+
+If the php.ini file is not found in any of the checked locations, two "echo" calls 
+are performed to print an error message to the console, describing that the file 
+couldn't be found. It then attempts to search for the location of the file, by 
+calling "sudo updatedb && locate php.ini". "updatedb" updates a database used by 
+the "locate" command, which tries to find a file with the name php.ini. This should 
+search the entire disk system for the php.ini file.
+
+
+T2: 
+
