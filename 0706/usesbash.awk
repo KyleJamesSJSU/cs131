@@ -1,0 +1,6 @@
+{
+	if (match($0,"bash")) 
+	{ 
+		print $1 " uses " $7
+	}
+}
