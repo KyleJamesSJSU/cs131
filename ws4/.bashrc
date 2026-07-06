@@ -1,10 +1,11 @@
 #!/bin/bash
 #
-#
+# Written by Kyle James
+# also added source ~/cs131/ws4/.bashrc to ~/.bashrc, didn't want to modify 
+# that file too much
 
 
 # Git commit and push in a single command
-alias 'git commit -m'=gitcp
 gitcp () 
 {
 	# check if a message was provided, if not print an error message
@@ -18,6 +19,26 @@ gitcp ()
 	fi
 }
 
+# Alias to go to home/cs131 directory quickly
+alias home='cd ~/cs131/'
+
+# Taken from example bashrc, makes a file executable
+alias mx='chmod a+x'
+
+# Inspired by the phpconfig command in the example bashrc, opens this file in a 
+# text editor and then runs source to update the environment
+bashrc () 
+{
+	vim ~/cs131/ws4/.bashrc
+	source ~/cs131/ws4/.bashrc
+}
+
+# Edit the .gitignore file
+gitignore () 
+{
+	vim ~/cs131/.gitignore
+}
+
 # Test command
 echotest () 
 {
@@ -26,5 +47,6 @@ echotest ()
 	else
 		echo "Failure"
 	fi
-
 }
+
+
