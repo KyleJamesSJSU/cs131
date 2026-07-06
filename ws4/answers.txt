@@ -50,4 +50,29 @@ search the entire disk system for the php.ini file.
 
 
 T2: 
+https://github.com/KyleJamesSJSU/cs131/blob/4403ff9908b5a0ca00501ee65fe5afa48b4d2ded/ws4/.bashrc#L12
 
+if [ -n "$1" ] ; then
+
+This if statement is inside my "gitcp" function, which runs "git commit -m <message>" 
+and "git push" in one function. The test, -n "$1", checks if the first argument 
+provided to the command is a string with nonzero length. If it is, it continues to 
+run the commit command with "$1" as the provided message. Otherwise, it prints an 
+error to the console with "echo". 
+
+
+https://github.com/KyleJamesSJSU/cs131/blob/4403ff9908b5a0ca00501ee65fe5afa48b4d2ded/ws4/.bashrc#L23
+
+alias home='cd ~/cs131/'
+
+A simple alias for returning to the home directory. Since all of our work is done in 
+the cs131 folder, I just set it to that. 
+
+
+https://github.com/KyleJamesSJSU/cs131/blob/4403ff9908b5a0ca00501ee65fe5afa48b4d2ded/ws4/.bashrc#L30
+
+bashrc ()
+
+A simple command that opens up the .bashrc file that was created for this assignment 
+in vim, and then runs "source" on it afterwards. Might be useful to me in the future 
+if I want to quickly add new functions/aliases to my environment. 
