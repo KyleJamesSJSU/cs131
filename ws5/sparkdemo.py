@@ -3,6 +3,7 @@ from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.regression import LinearRegression
 from pyspark.ml import Pipeline
 from pyspark.ml.evaluation import RegressionEvaluator
+import sys
 
 # A1: create spark session named ws5-regression
 spark = SparkSession.builder.appName("ws5-regression").getOrCreate()
@@ -39,7 +40,7 @@ predDF.select("total_bill","size","features","tip","prediction").show(10)
 
 # A7: RMSE and R^2
 regressionEvaluator = RegressionEvaluator(
-    predictionCol="prediction"
+    predictionCol="prediction",
     labelCol="tip")
 # RMSE
 rmse = regressionEvaluator.evaluate(predDF, {regressionEvaluator.metricName: "rmse"})

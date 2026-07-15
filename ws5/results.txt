@@ -1,5 +1,97 @@
-Batch [685589a3b20f4131b7366aa7aa07012d] submitted.
+Batch [07ad8d8814584b5aa909cc2ca3ae12ce] submitted.
 WARNING: No runtime version specified. Using the default runtime version. It is recommended to select a specific major.minor runtime version in production, as the default runtime version may change at any time.
-ERROR: (gcloud.dataproc.batches.submit.pyspark) Batch job is FAILED. Detail: Error Code: UNAVAILABLE, errorSource: COMPUTE_ENGINE, Error Message: The zone 'projects/cs131-project-499516/zones/us-central1-b' does not have enough resources available to fulfill the request.  Try a different zone, or try again later.
-.
-Running auto diagnostics on the batch. It may take few minutes before diagnostics output is available. Please check diagnostics output by running 'gcloud dataproc batches describe' command.
+Using the default container image
+Waiting for container log creation
+PYSPARK_PYTHON=/opt/dataproc/conda/bin/python
+Generating /home/spark/.pip/pip.conf
+Configuring index-url as 'https://us-python.pkg.dev/artifact-registry-python-cache/virtual-python/simple/'
+JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
+SPARK_EXTRA_CLASSPATH=
+:: loading settings :: file = /etc/spark/conf/ivysettings.xml
+26/07/15 18:02:20 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-google-hadoop-file-system.properties,hadoop-metrics2.properties
+26/07/15 18:02:20 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+26/07/15 18:02:20 INFO MetricsSystemImpl: google-hadoop-file-system metrics system started
++----------+----+------+------+---+------+----+
+|total_bill| tip|   sex|smoker|day|  time|size|
++----------+----+------+------+---+------+----+
+|     16.99|1.01|Female|    No|Sun|Dinner|   2|
+|     10.34|1.66|  Male|    No|Sun|Dinner|   3|
+|     21.01| 3.5|  Male|    No|Sun|Dinner|   3|
+|     23.68|3.31|  Male|    No|Sun|Dinner|   2|
+|     24.59|3.61|Female|    No|Sun|Dinner|   4|
+|     25.29|4.71|  Male|    No|Sun|Dinner|   4|
+|      8.77| 2.0|  Male|    No|Sun|Dinner|   2|
+|     26.88|3.12|  Male|    No|Sun|Dinner|   4|
+|     15.04|1.96|  Male|    No|Sun|Dinner|   2|
+|     14.78|3.23|  Male|    No|Sun|Dinner|   2|
+|     10.27|1.71|  Male|    No|Sun|Dinner|   2|
+|     35.26| 5.0|Female|    No|Sun|Dinner|   4|
+|     15.42|1.57|  Male|    No|Sun|Dinner|   2|
+|     18.43| 3.0|  Male|    No|Sun|Dinner|   4|
+|     14.83|3.02|Female|    No|Sun|Dinner|   2|
+|     21.58|3.92|  Male|    No|Sun|Dinner|   2|
+|     10.33|1.67|Female|    No|Sun|Dinner|   3|
+|     16.29|3.71|  Male|    No|Sun|Dinner|   3|
+|     16.97| 3.5|Female|    No|Sun|Dinner|   3|
+|     20.65|3.35|  Male|    No|Sat|Dinner|   3|
++----------+----+------+------+---+------+----+
+only showing top 20 rows
+
++----------+----+-----------+----+
+|total_bill|size|   features| tip|
++----------+----+-----------+----+
+|     16.99|   2|[16.99,2.0]|1.01|
+|     10.34|   3|[10.34,3.0]|1.66|
+|     21.01|   3|[21.01,3.0]| 3.5|
+|     23.68|   2|[23.68,2.0]|3.31|
+|     24.59|   4|[24.59,4.0]|3.61|
+|     25.29|   4|[25.29,4.0]|4.71|
+|      8.77|   2| [8.77,2.0]| 2.0|
+|     26.88|   4|[26.88,4.0]|3.12|
+|     15.04|   2|[15.04,2.0]|1.96|
+|     14.78|   2|[14.78,2.0]|3.23|
++----------+----+-----------+----+
+only showing top 10 rows
+
+26/07/15 18:02:34 WARN Instrumentation: [487421cb] regParam is zero, which might cause numerical instability and overfitting.
+26/07/15 18:02:35 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
++----------+----+-----------+----+------------------+
+|total_bill|size|   features| tip|        prediction|
++----------+----+-----------+----+------------------+
+|      7.25|   1| [7.25,1.0]| 1.0|1.6830371194525977|
+|      7.74|   2| [7.74,2.0]|1.44|1.8528775356890892|
+|      9.55|   2| [9.55,2.0]|1.45|  2.00139044491931|
+|       9.6|   2|  [9.6,2.0]| 4.0|2.0054930114726313|
+|     10.07|   1|[10.07,1.0]|1.83|1.9144218730599032|
+|     10.33|   2|[10.33,2.0]| 2.0| 2.065390483151118|
+|     10.65|   2|[10.65,2.0]| 1.5|2.0916469090923724|
+|     10.77|   2|[10.77,2.0]|1.47| 2.101493068820343|
+|     11.24|   2|[11.24,2.0]|1.76|2.1400571944215603|
+|     11.35|   2|[11.35,2.0]| 2.5| 2.149082840838867|
++----------+----+-----------+----+------------------+
+only showing top 10 rows
+
+Coefficients: [0.08205133106642035,0.12963526401394537]
+Intercept: 0.9585297052071049
+Line formula: 0.08x + 0.96
+
+RMSE: 1.264621578406299
+R^2: 0.4898108269552648
+Batch [07ad8d8814584b5aa909cc2ca3ae12ce] finished.
+metadata:
+  '@type': type.googleapis.com/google.cloud.dataproc.v1.BatchOperationMetadata
+  batch: projects/cs131-project-499516/locations/us-central1/batches/07ad8d8814584b5aa909cc2ca3ae12ce
+  batchUuid: 711f2cc0-8efa-4bff-985a-2e99e83f4b8a
+  createTime: '2026-07-15T18:01:08.647071Z'
+  description: Batch
+  labels:
+    goog-dataproc-batch-id: 07ad8d8814584b5aa909cc2ca3ae12ce
+    goog-dataproc-batch-uuid: 711f2cc0-8efa-4bff-985a-2e99e83f4b8a
+    goog-dataproc-drz-resource-uuid: batch-711f2cc0-8efa-4bff-985a-2e99e83f4b8a
+    goog-dataproc-location: us-central1
+  operationType: BATCH
+  warnings:
+  - No runtime version specified. Using the default runtime version. It is recommended
+    to select a specific major.minor runtime version in production, as the default
+    runtime version may change at any time.
+name: projects/cs131-project-499516/regions/us-central1/operations/0f82addc-02a3-3efd-8d70-9fa96cba3746
