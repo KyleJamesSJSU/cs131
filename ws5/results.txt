@@ -1,0 +1,5 @@
+Batch [685589a3b20f4131b7366aa7aa07012d] submitted.
+WARNING: No runtime version specified. Using the default runtime version. It is recommended to select a specific major.minor runtime version in production, as the default runtime version may change at any time.
+ERROR: (gcloud.dataproc.batches.submit.pyspark) Batch job is FAILED. Detail: Error Code: UNAVAILABLE, errorSource: COMPUTE_ENGINE, Error Message: The zone 'projects/cs131-project-499516/zones/us-central1-b' does not have enough resources available to fulfill the request.  Try a different zone, or try again later.
+.
+Running auto diagnostics on the batch. It may take few minutes before diagnostics output is available. Please check diagnostics output by running 'gcloud dataproc batches describe' command.
