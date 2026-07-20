@@ -51,11 +51,11 @@ r2 = regressionEvaluator.evaluate(predDF, {regressionEvaluator.metricName: "r2"}
 # pull
 lrModel = pipelineModel.stages[-1]
 # print coefficients and intercept
-m = round(lrModel.coefficients[0], 2)
-b = round(lrModel.intercept, 2)
+m = round(lrModel.coefficients[0], 3)
+b = round(lrModel.intercept, 3)
 print(f"Coefficients: {lrModel.coefficients}")
 print(f"Intercept: {lrModel.intercept}")
-print(f"Line formula: {m}x + {b}\n")
+print(f"Line formula: ({m} * tips) + {b}\n")
 # print RMSE
 print(f"RMSE: {rmse}")
 # print R^2

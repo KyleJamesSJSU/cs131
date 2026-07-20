@@ -1,4 +1,6 @@
-Batch [07ad8d8814584b5aa909cc2ca3ae12ce] submitted.
+# Interpretation: Predicted tips rise by ~$0.082 per dollar of the total bill, plus a base amount of ~$0.959. 
+
+Batch [aec25bf96b234ee1be8f8a6d1518e104] submitted.
 WARNING: No runtime version specified. Using the default runtime version. It is recommended to select a specific major.minor runtime version in production, as the default runtime version may change at any time.
 Using the default container image
 Waiting for container log creation
@@ -8,9 +10,9 @@ Configuring index-url as 'https://us-python.pkg.dev/artifact-registry-python-cac
 JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
 SPARK_EXTRA_CLASSPATH=
 :: loading settings :: file = /etc/spark/conf/ivysettings.xml
-26/07/15 18:02:20 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-google-hadoop-file-system.properties,hadoop-metrics2.properties
-26/07/15 18:02:20 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
-26/07/15 18:02:20 INFO MetricsSystemImpl: google-hadoop-file-system metrics system started
+26/07/20 06:15:59 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-google-hadoop-file-system.properties,hadoop-metrics2.properties
+26/07/20 06:15:59 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+26/07/20 06:15:59 INFO MetricsSystemImpl: google-hadoop-file-system metrics system started
 +----------+----+------+------+---+------+----+
 |total_bill| tip|   sex|smoker|day|  time|size|
 +----------+----+------+------+---+------+----+
@@ -53,8 +55,8 @@ only showing top 20 rows
 +----------+----+-----------+----+
 only showing top 10 rows
 
-26/07/15 18:02:34 WARN Instrumentation: [487421cb] regParam is zero, which might cause numerical instability and overfitting.
-26/07/15 18:02:35 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+26/07/20 06:16:24 WARN Instrumentation: [7910840a] regParam is zero, which might cause numerical instability and overfitting.
+26/07/20 06:16:26 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
 +----------+----+-----------+----+------------------+
 |total_bill|size|   features| tip|        prediction|
 +----------+----+-----------+----+------------------+
@@ -73,25 +75,25 @@ only showing top 10 rows
 
 Coefficients: [0.08205133106642035,0.12963526401394537]
 Intercept: 0.9585297052071049
-Line formula: 0.08x + 0.96
+Line formula: (0.082 * tips) + 0.959
 
 RMSE: 1.264621578406299
 R^2: 0.4898108269552648
-Batch [07ad8d8814584b5aa909cc2ca3ae12ce] finished.
+Batch [aec25bf96b234ee1be8f8a6d1518e104] finished.
 metadata:
   '@type': type.googleapis.com/google.cloud.dataproc.v1.BatchOperationMetadata
-  batch: projects/cs131-project-499516/locations/us-central1/batches/07ad8d8814584b5aa909cc2ca3ae12ce
-  batchUuid: 711f2cc0-8efa-4bff-985a-2e99e83f4b8a
-  createTime: '2026-07-15T18:01:08.647071Z'
+  batch: projects/cs131-project-499516/locations/us-central1/batches/aec25bf96b234ee1be8f8a6d1518e104
+  batchUuid: b6e7f08e-58b2-4ad7-8f62-53c3eead859b
+  createTime: '2026-07-20T06:14:46.815600Z'
   description: Batch
   labels:
-    goog-dataproc-batch-id: 07ad8d8814584b5aa909cc2ca3ae12ce
-    goog-dataproc-batch-uuid: 711f2cc0-8efa-4bff-985a-2e99e83f4b8a
-    goog-dataproc-drz-resource-uuid: batch-711f2cc0-8efa-4bff-985a-2e99e83f4b8a
+    goog-dataproc-batch-id: aec25bf96b234ee1be8f8a6d1518e104
+    goog-dataproc-batch-uuid: b6e7f08e-58b2-4ad7-8f62-53c3eead859b
+    goog-dataproc-drz-resource-uuid: batch-b6e7f08e-58b2-4ad7-8f62-53c3eead859b
     goog-dataproc-location: us-central1
   operationType: BATCH
   warnings:
   - No runtime version specified. Using the default runtime version. It is recommended
     to select a specific major.minor runtime version in production, as the default
     runtime version may change at any time.
-name: projects/cs131-project-499516/regions/us-central1/operations/0f82addc-02a3-3efd-8d70-9fa96cba3746
+name: projects/cs131-project-499516/regions/us-central1/operations/4165c006-e3cb-3ca3-929a-058d8a321366
