@@ -1,0 +1,5 @@
+T1: mkdir moo-fingerprint
+cd moo-fingerprint
+
+T2: done
+T3: cowsay==6.1
